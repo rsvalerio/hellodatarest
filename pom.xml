@@ -80,7 +80,7 @@
     </pluginRepositories>
 
     <scm>
-        <developerConnection>scm:git:ssh://admin:admin@127.0.0.1:29418/hellodatarest.git</developerConnection>
+        <developerConnection>scm:git:http://admin:admin@127.0.0.1:8080/r/hellodatarest.git</developerConnection>
       <tag>hellodatarest-1.0.0</tag>
   </scm>
 </project>
