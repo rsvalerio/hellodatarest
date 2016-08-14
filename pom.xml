@@ -4,7 +4,7 @@
 
     <groupId>com.rsvalerio.teste</groupId>
     <artifactId>hellodatarest</artifactId>
-    <version>3.0.0</version>
+    <version>3.0.1-SNAPSHOT</version>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -81,7 +81,7 @@
 
     <scm>
         <developerConnection>scm:git:http://admin:admin@127.0.0.1:8080/r/hellodatarest.git</developerConnection>
-      <tag>hellodatarest-3.0.0</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <distributionManagement>
