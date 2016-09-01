@@ -14,6 +14,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <project.scm.id>git</project.scm.id>
     </properties>
 
     <dependencies>
@@ -146,6 +147,7 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.4.11</version>
                 <configuration>
+                    <forceTags>true</forceTags>
                     <imageName>rsvalerio/${project.artifactId}</imageName>
                     <baseImage>anapsix/alpine-java</baseImage>
                     <runs>sh -c 'touch /${project.build.finalName}.jar'</runs>
@@ -159,6 +161,15 @@
                         </resource>
                     </resources>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>build-image</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -182,14 +193,14 @@
     </pluginRepositories>
 
     <scm>
-        <developerConnection>scm:git:http://admin:admin@127.0.0.1:8080/r/hellodatarest.git</developerConnection>
+        <developerConnection>scm:git:http://127.0.0.1:8080/r/hellodatarest.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
         <repository>
-            <id>rsvalerio</id>
-            <name>rsvalerio</name>
+            <id>nexus2</id>
+            <name>nexus2</name>
             <url>http://admin:admin123@localhost:8081/content/repositories/releases/</url>
         </repository>
         <site>
